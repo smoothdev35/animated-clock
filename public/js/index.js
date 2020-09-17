@@ -1,7 +1,3 @@
-import {gsap} from 'gsap'; 
-
-gsap.registerPlugin(DrawSVGPlugin, MorphSVGPlugin);
-
 gsap.registerPlugin(DrawSVGPlugin, MorphSVGPlugin);
 
 const Clock = {
@@ -36,7 +32,7 @@ const Clock = {
             drawSVG: "100% 100%",
             onComplete: () => {
               gsap.set(item, { stroke: "#FFF" });
-            }
+            },
           })
         : null;
     });
@@ -73,8 +69,8 @@ const Clock = {
     let tl = gsap.timeline({
       defaults: {
         duration: 1,
-        ease: "none"
-      }
+        ease: "none",
+      },
     });
     let circShape = MorphSVGPlugin.convertToPath("#noon-sun");
     tl.to("#half-sun", { morphSVG: circShape, strokeWidth: 0 })
@@ -85,8 +81,8 @@ const Clock = {
             x1: "300",
             x2: "300",
             y1: "130",
-            y2: "180"
-          }
+            y2: "180",
+          },
         },
         ">-1"
       )
@@ -97,8 +93,8 @@ const Clock = {
             x1: "285",
             x2: "285",
             y1: "95",
-            y2: "145"
-          }
+            y2: "145",
+          },
         },
         ">-1"
       )
@@ -107,8 +103,8 @@ const Clock = {
         {
           attr: {
             y1: "80",
-            y2: "130"
-          }
+            y2: "130",
+          },
         },
         ">-1"
       )
@@ -119,8 +115,8 @@ const Clock = {
             x1: "215",
             x2: "215",
             y1: "95",
-            y2: "145"
-          }
+            y2: "145",
+          },
         },
         ">-1"
       )
@@ -131,8 +127,8 @@ const Clock = {
             x1: "200",
             x2: "200",
             y1: "130",
-            y2: "180"
-          }
+            y2: "180",
+          },
         },
         ">-1"
       )
@@ -141,15 +137,15 @@ const Clock = {
         {
           attr: {
             y1: "430",
-            y2: "430"
+            y2: "430",
           },
           drawSVG: "50% 50%",
           onComplete: () => {
             gsap.to(".sun-below.bottom", 0.08, {
               strokeWidth: "0",
-              ease: "none"
+              ease: "none",
             });
-          }
+          },
         },
         ">-1"
       )
@@ -158,19 +154,18 @@ const Clock = {
         {
           attr: {
             y1: "430",
-            y2: "430"
+            y2: "430",
           },
           drawSVG: "50% 50%",
           onComplete: () => {
             gsap.to(".sun-below.top", 0.08, { strokeWidth: "0", ease: "none" });
-          }
+          },
         },
         ">-0.7"
       )
       .to(".ray.six", { drawSVG: "100% 0" }, ">-.9")
       .to(".ray.eight", { drawSVG: "100% 0" }, ">-1")
       .to(".ray.seven", { drawSVG: "100% 0" }, ">-.8");
-        console.log(tl.duration())
   },
   toDusk() {
     Clock.iconWrapper.classList.remove("activated");
@@ -182,21 +177,21 @@ const Clock = {
     let tl = gsap.timeline({
       defaults: {
         duration: 1,
-        ease: "none"
-      }
+        ease: "none",
+      },
     });
     gsap.set(".sun-below.top", {
-      strokeWidth: "30"
+      strokeWidth: "30",
     });
     gsap.set(".sun-below.bottom", {
-      strokeWidth: "30"
+      strokeWidth: "30",
     });
     tl.to(".sun-below.top", {
       attr: {
         y1: "350",
-        y2: "350"
+        y2: "350",
       },
-      drawSVG: "0 100%"
+      drawSVG: "0 100%",
     })
       .to(".ray.seven", 0.5, { drawSVG: "100% 100%" }, ">-1")
       .to(".ray.six", 0.3, { drawSVG: "100% 100%" }, ">0.1")
@@ -206,9 +201,9 @@ const Clock = {
         {
           attr: {
             y1: "400",
-            y2: "400"
+            y2: "400",
           },
-          drawSVG: "0 100%"
+          drawSVG: "0 100%",
         },
         ">-0.8"
       )
@@ -217,7 +212,7 @@ const Clock = {
         "#half-sun",
         {
           morphSVG: "#half-shape",
-          strokeWidth: "30"
+          strokeWidth: "30",
         },
         ">-.8"
       )
@@ -228,8 +223,8 @@ const Clock = {
             x1: "250",
             y1: "100",
             x2: "250",
-            y2: "150"
-          }
+            y2: "150",
+          },
         },
         ">-1"
       )
@@ -240,8 +235,8 @@ const Clock = {
             x1: "250",
             y1: "100",
             x2: "250",
-            y2: "150"
-          }
+            y2: "150",
+          },
         },
         ">-1"
       )
@@ -252,8 +247,8 @@ const Clock = {
             x1: "250",
             y1: "100",
             x2: "250",
-            y2: "150"
-          }
+            y2: "150",
+          },
         },
         ">-1"
       )
@@ -264,8 +259,8 @@ const Clock = {
             x1: "250",
             y1: "100",
             x2: "250",
-            y2: "150"
-          }
+            y2: "150",
+          },
         },
         ">-1"
       )
@@ -276,12 +271,11 @@ const Clock = {
             x1: "250",
             y1: "100",
             x2: "250",
-            y2: "150"
-          }
+            y2: "150",
+          },
         },
         ">-1"
       );
-        console.log(tl.duration())
   },
   toNight() {
     Clock.iconWrapper.classList.add("activated");
@@ -293,14 +287,14 @@ const Clock = {
     let tl = gsap.timeline({
       defaults: {
         duration: 1,
-        ease: "none"
-      }
+        ease: "none",
+      },
     });
     tl.to(".sun-below.top", {
       attr: {
         y1: "270",
-        y2: "270"
-      }
+        y2: "270",
+      },
     })
       .to(
         ".sun-below.top",
@@ -310,9 +304,9 @@ const Clock = {
           onComplete: () => {
             gsap.to(".sun-below.top", 0.075, {
               strokeWidth: "0",
-              ease: "none"
+              ease: "none",
             });
-          }
+          },
         },
         ">-.5"
       )
@@ -327,8 +321,8 @@ const Clock = {
         {
           attr: {
             y1: "280",
-            y2: "280"
-          }
+            y2: "280",
+          },
         },
         ">-0.75"
       )
@@ -341,15 +335,15 @@ const Clock = {
           onComplete: () => {
             gsap.to(".sun-below.bottom", 0.08, {
               strokeWidth: "0",
-              ease: "none"
+              ease: "none",
             });
-          }
+          },
         },
         ">-0.5"
       )
       .to("#moon-wr", 0.6, {
         y: 10,
-        fillOpacity: "1"
+        fillOpacity: "1",
       })
       .to(
         ".star",
@@ -357,7 +351,6 @@ const Clock = {
         { rotate: "0", fill: "#FFF", transformOrigin: "50% 50%" },
         ">-.1"
       );
-        console.log(tl.duration())
   },
   toDawn() {
     Clock.iconWrapper.classList.remove("activated");
@@ -369,53 +362,59 @@ const Clock = {
     let tl = gsap.timeline({
       defaults: {
         duration: 1,
-        ease: "none"
-      }
+        ease: "none",
+      },
     });
     tl.to(".star", 0.4, {
       rotate: "-30",
       fill: "transparent",
-      transformOrigin: "50% 50%"
+      transformOrigin: "50% 50%",
     })
       .to(
         "#moon-wr",
         {
           y: 250,
-          fillOpacity: "0"
+          fillOpacity: "0",
         },
         ">-.1"
       )
       .to(".sun-below.top", 0.08, {
-        strokeWidth: "30"
+        strokeWidth: "30",
       })
       .to(".sun-below.top", {
         attr: {
           y1: "350",
-          y2: "350"
+          y2: "350",
         },
-        drawSVG: "0 100%"
+        drawSVG: "0 100%",
       })
       .to(
         "#sunset-group",
         {
           scale: "1",
-          transformOrigin: "50% 65%"
+          transformOrigin: "50% 65%",
         },
         ">-1"
       )
-      .to(".sun-below.bottom",0.08,{
-        strokeWidth: "30"
-      },">-1.15")
+      .to(
+        ".sun-below.bottom",
+        0.08,
+        {
+          strokeWidth: "30",
+        },
+        ">-1.15"
+      )
       .to(
         ".sun-below.bottom",
         {
           attr: {
             y1: "400",
-            y2: "400"
+            y2: "400",
           },
-          drawSVG: "0 100%"
-        },">-0.08");
-    console.log(tl.duration())
+          drawSVG: "0 100%",
+        },
+        ">-0.08"
+      );
   },
 
   animateClock(endnum) {
@@ -519,7 +518,7 @@ const Clock = {
       Clock.passNumber(upperTarget2, Clock.mArr, count2);
       Clock.passNumber(upperTarget, Clock.mArr, count);
     }, 5);
-  }
+  },
 };
 
 Clock.setClock();
