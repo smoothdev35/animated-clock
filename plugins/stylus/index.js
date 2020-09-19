@@ -1,7 +1,7 @@
 module.exports = {
-  onBuild: async ({ utils: { run } }) => {
+  onPreBuild: async ({ utils: { run } }) => {
     await run.command(
-    "stylus -w public/_includes/css/main.styl -o public/css/main.css"
+    "stylus public/_includes/css/main.styl -o public/css/main.css"
     );
   },
 };

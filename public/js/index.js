@@ -343,13 +343,13 @@ const Clock = {
       )
       .to("#moon-wr", 0.6, {
         y: 10,
-        fillOpacity: "1",
+        fillOpacity:1
       })
       .to(
         ".star",
         0.4,
-        { rotate: "0", fill: "#FFF", transformOrigin: "50% 50%" },
-        ">-.1"
+        { rotate: "0",transformOrigin: "50% 50%",fill:"#fff"},
+        ">-.2"
       );
   },
   toDawn() {
@@ -367,14 +367,14 @@ const Clock = {
     });
     tl.to(".star", 0.4, {
       rotate: "-30",
-      fill: "transparent",
       transformOrigin: "50% 50%",
+      fill:"transparent",
     })
       .to(
         "#moon-wr",
         {
           y: 250,
-          fillOpacity: "0",
+          fillOpacity:0
         },
         ">-.1"
       )
