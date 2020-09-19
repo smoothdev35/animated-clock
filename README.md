@@ -1,6 +1,6 @@
 # animated-clock
 
-- Stand-alone:
+- Stand-alone: https://animated-clock.netlify.app/
 
 - Codepen: https://codepen.io/smoothdev35/pen/JjGEKpm
 
